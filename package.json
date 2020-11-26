@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "server": "json-server server.json -p 3333 -w",
+    "server:delay": "json-server server.json -p 3333 -w -d 2000"
   },
   "dependencies": {
     "next": "10.0.2",
