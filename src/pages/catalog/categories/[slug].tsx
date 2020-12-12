@@ -13,6 +13,12 @@ interface ICategoriesProps {
 export default function Category({ products }: ICategoriesProps) {
     const router = useRouter();
 
+    async function handleSum() {
+        const math = (await import('../../../lib/math')).default;
+
+        alert(math.sum(2, 6));
+    }
+
     return (
         <div>
             <h1>{router.query.slug}</h1>
@@ -25,6 +31,7 @@ export default function Category({ products }: ICategoriesProps) {
                 );
                 })}
             </ul>
+            <button onClick={handleSum}>Sum!</button>
         </div>
     );
 }
