@@ -14,7 +14,7 @@ export default function Category({ products }: ICategoriesProps) {
     const router = useRouter();
 
     async function handleSum() {
-        const math = (await import('../../../lib/math')).default;
+        const math = (await import('@/lib/math')).default;
 
         alert(math.sum(2, 6));
     }
